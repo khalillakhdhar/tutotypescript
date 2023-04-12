@@ -1,9 +1,19 @@
 class Car {
     //field
     private engine:string ;
+    readonly portes:number=4; // valeur constante
+    public model:string; // public par défaut
+    
     //constructor
-    constructor(engine:string ) {
-    this.engine    = engine
+    constructor(engine:string,model:string) {
+    this.engine    = engine;
+    this.model = model;
+   // this.portes = portes; // readonly ne peut pas être modifié
+
+    }
+    // get portes
+    getPortes():number {
+    return this.portes;
     }
     //encapsulation
     getEngine():string {
@@ -15,13 +25,13 @@ class Car {
     // contrairement à Java, il n'y a pas de mot clé "function" pour définir une méthode et on a un seul constructor
     //function
     disp():void {
-    console.log("Engine is    : "+this.engine );
+    console.log("Engine is : "+this.engine+" and model is : "+this.model);
     // this est obligatoire pour accéder aux champs de la classe
     }
     }
     //create an object
-    var c1 = new Car("Turbo");
-    var c2 = new Car("Normal");
+    var c1 = new Car("Turbo","Audi");
+    var c2 = new Car("Normal","BMW");
     c1.disp();
     //console.log(c1.engine) // "engine innaccessible car privé"
     console.log(c1.getEngine()); // "engine accessible via getEngine"
