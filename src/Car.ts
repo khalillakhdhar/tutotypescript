@@ -2,9 +2,9 @@ class Car {
     //field
     private engine:string ;
     readonly portes:number=4; // valeur constante
-    public model:string; // public par défaut
+     model:string; // public par défaut
     
-    //constructor
+    //constructor (méthode spéciale qui est appelée lors de la création d'un objet)
     constructor(engine:string,model:string) {
     this.engine    = engine;
     this.model = model;
@@ -30,7 +30,7 @@ class Car {
     }
     }
     //create an object
-    var c1 = new Car("Turbo","Audi");
+    var c1 = new Car("Turbo","Audi"); // appel du constructeur
     var c2 = new Car("Normal","BMW");
     c1.disp();
     //console.log(c1.engine) // "engine innaccessible car privé"
