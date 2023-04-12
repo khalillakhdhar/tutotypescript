@@ -1,4 +1,4 @@
-import { Personne } from "./Person";
+import { Personne } from "./Person"; // importation de la structure person
 /**
  * @constructor
  * @param {number} nombreElements
@@ -8,7 +8,7 @@ import { Personne } from "./Person";
 export function genererTableauAleatoire(nombreElements: number): Personne[] {
   const personnes: Personne[] = [];
   for (let i = 0; i < nombreElements; i++) {
-    const sexe = Math.random() < 0.5 ? "masculin" : "féminin";
+    const sexe = Math.random() < 0.5 ? "masculin" : "féminin"; // "masculin" ou "féminin" avec une personne 0 ou 1
     const age = Math.floor(Math
         .random() * 100) + 1;
         const nom = sexe === "masculin" ? genererNomMasculin() : genererNomFeminin();
