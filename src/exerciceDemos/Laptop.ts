@@ -2,7 +2,7 @@ import { Device } from "./Device";
 
 export class Laptop extends Device
 {
-    autonomie:number;
+    autonomie:number;   
     constructor(marque:string,modele:string,cpu:string,ram:string,prix:number,autonomie:number)
     {
         super(marque,modele,cpu,ram,prix);

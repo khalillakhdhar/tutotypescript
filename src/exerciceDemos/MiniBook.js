@@ -15,20 +15,18 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Laptop = void 0;
-var Device_1 = require("./Device");
-var Laptop = /** @class */ (function (_super) {
-    __extends(Laptop, _super);
-    function Laptop(marque, modele, cpu, ram, prix, autonomie) {
-        var _this = _super.call(this, marque, modele, cpu, ram, prix) || this;
-        _this.autonomie = autonomie;
+exports.MiniBook = void 0;
+var Laptop_1 = require("./Laptop");
+var MiniBook = /** @class */ (function (_super) {
+    __extends(MiniBook, _super);
+    function MiniBook(marque, modele, cpu, ram, prix, autonomie, screen) {
+        var _this = _super.call(this, marque, modele, cpu, ram, prix, autonomie) || this;
+        _this.screen = screen;
         return _this;
     }
-    // toString():string
-    // @Override
-    Laptop.prototype.toString = function () {
-        return _super.prototype.toString.call(this) + " Autonomie : " + this.autonomie;
+    MiniBook.prototype.toString = function () {
+        return _super.prototype.toString.call(this) + " Screen : " + this.screen;
     };
-    return Laptop;
-}(Device_1.Device));
-exports.Laptop = Laptop;
+    return MiniBook;
+}(Laptop_1.Laptop));
+exports.MiniBook = MiniBook;
